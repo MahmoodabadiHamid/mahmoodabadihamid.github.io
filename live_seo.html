@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Project Introduction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #009688;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #009688;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .slideshow-container img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+        .slideshow-container img:first-child {
+            display: block;
+        }
+        .prev, .next, .fullscreen {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: #009688; /* Add background color */
+            transition: 0.3s ease;
+            border-radius: 5px; /* Add rounded corners */
+            opacity: .6;
+        }
+        .prev:hover, .next:hover, .fullscreen:hover {
+            background-color: #007a63; /* Change color on hover */
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+        .fullscreen {
+            right: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var currentIndex = 0;
+            var screenshots = $(".screenshot");
+            var totalScreenshots = screenshots.length;
+
+            function showScreenshot(index) {
+                screenshots.hide();
+                screenshots.eq(index).fadeIn();
+            }
+
+            function showNextScreenshot() {
+                currentIndex = (currentIndex + 1) % totalScreenshots;
+                showScreenshot(currentIndex);
+            }
+
+            function showPrevScreenshot() {
+                currentIndex = (currentIndex - 1 + totalScreenshots) % totalScreenshots;
+                showScreenshot(currentIndex);
+            }
+
+            function toggleFullScreen() {
+                var element = document.querySelector(".slideshow-container");
+                if (!document.fullscreenElement) {
+                    if (element.requestFullscreen) {
+                        element.requestFullscreen();
+                    } else if (element.mozRequestFullScreen) {
+                        element.mozRequestFullScreen();
+                    } else if (element.webkitRequestFullscreen) {
+                        element.webkitRequestFullscreen();
+                    } else if (element.msRequestFullscreen) {
+                        element.msRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    }
+                }
+            }
+
+            $(".next").click(showNextScreenshot);
+            $(".prev").click(showPrevScreenshot);
+            $(".fullscreen").click(toggleFullScreen);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Project Name</h1>
+        <p>A Professional Software Project Introduction</p>
+    </header>
+
+    <section>
+        <h2>About the Project</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, risus ut cursus cursus, orci urna fringilla dui, eu facilisis risus purus sit amet turpis. Sed sit amet lorem eu arcu dignissim consequat.
+        </p>
+    </section>
+
+    <section>
+        <h2>Project Screenshots</h2>
+        <div class="slideshow-container">
+            <img class="screenshot" src="images/1- Live_stock_market_analysis_dashboard.png" alt="Screenshot 1">
+            <img class="screenshot" src="images/1- Live_stock_market_analysis_dashboard.png" alt="Screenshot 2">
+            <!-- Add more screenshots as needed -->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <a class="fullscreen">&#128470;</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Tools Used</h2>
+        <ul>
+            <li>Tool 1</li>
+            <li>Tool 2</li>
+            <li>Tool 3</li>
+            <!-- Add more tools as needed -->
+        </ul>
+    </section>
+</body>
+</html>
+
