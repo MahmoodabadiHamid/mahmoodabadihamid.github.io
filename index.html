@@ -1,334 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="google-site-verification" content="d5IEe1JdAyx36APg4XNAD3FI0mIrmXcAjaevhv8tQro" />
-  <meta name="google-site-verification" content="JbEn0TX_q-yzeusM81tb0e6ZW3LRYH6XuQMEY76pr0s" />
-  <title>Hamid Mahmoodabadi | Senior Data Scientist</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.jpg">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8" />
+  <title>Hamid Mahmoodabadi - Senior Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto", sans-serif;
+    /* ====== ORIGINAL CSS (structure & appearance preserved) ====== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      color: #222;
+      background: #f5f5f5;
     }
 
     a {
-      word-break: break-word;
+      color: #0066cc;
+      text-decoration: none;
     }
 
-    .section-list li {
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 30px auto;
+      background: #ffffff;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.11);
+      display: flex;
+    }
+
+    .sidebar {
+      width: 30%;
+      background: #1f2933;
+      color: #f9fafb;
+      padding: 24px 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(249, 250, 251, 0.2);
+      padding-bottom: 4px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+
+    .sidebar p,
+    .sidebar li {
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar .label {
+      font-weight: 600;
+      display: inline-block;
+      width: 80px;
+    }
+
+    .sidebar .contact-item {
       margin-bottom: 6px;
+    }
+
+    .sidebar .small-muted {
+      font-size: 0.8rem;
+      color: #cbd2e1;
+    }
+
+    .main {
+      width: 70%;
+      padding: 24px 32px 32px 32px;
+    }
+
+    header.main-header {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+      color: #111827;
+    }
+
+    .role-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+
+    .summary {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-top: 4px;
+    }
+
+    h2.section-title {
+      font-size: 1.1rem;
+      color: #111827;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 3px;
+    }
+
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .experience-item {
+      margin-bottom: 14px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .experience-role {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: #111827;
+    }
+
+    .experience-company {
+      font-size: 0.94rem;
+      color: #4b5563;
+    }
+
+    .experience-location {
+      font-size: 0.86rem;
+      color: #6b7280;
+      margin-left: 4px;
+    }
+
+    .experience-dates {
+      font-size: 0.86rem;
+      color: #6b7280;
+    }
+
+    .experience ul {
+      margin-top: 4px;
+      margin-left: 18px;
+      font-size: 0.9rem;
+    }
+
+    .experience li {
+      margin-bottom: 3px;
+    }
+
+    .skills-list {
+      list-style: disc;
+      margin-left: 16px;
+      font-size: 0.9rem;
+    }
+
+    .edu-item {
+      margin-bottom: 10px;
+    }
+
+    .edu-degree {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .edu-school {
+      font-size: 0.92rem;
+      color: #374151;
+    }
+
+    .edu-details {
+      font-size: 0.86rem;
+      color: #4b5563;
+    }
+
+    .pub-item {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .pub-title {
+      font-weight: 600;
+    }
+
+    .pub-venue {
+      font-style: italic;
+      color: #4b5563;
+    }
+
+    .lang-item {
+      font-size: 0.9rem;
+      margin-bottom: 3px;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        flex-direction: column;
+      }
+      .sidebar,
+      .main {
+        width: 100%;
+      }
+    }
+
+    /* Minimal addition to differentiate Khanoumi role/company text */
+    .khanoumi-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #111827;
+    }
+    .khanoumi-company {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: #374151;
+      margin-left: 6px;
+    }
+    .khanoumi-location {
+      font-size: 0.86rem;
+      color: #6b7280;
+      margin-left: 4px;
     }
   </style>
 </head>
+<body>
+  <div class="page">
+    <!-- LEFT COLUMN / SIDEBAR -->
+    <aside class="sidebar">
+      <!-- Contact -->
+      <section class="sidebar-section">
+        <h2>Contact</h2>
+        <div class="contact-item">
+          <span class="label">Phone:</span>
+          <span>+98 912 251 1147</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Email:</span>
+          <span>MahmoodabadiHamid@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">Location:</span>
+          <span>Tehran, Iran</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">LinkedIn:</span>
+          <span><a href="https://www.linkedin.com" target="_blank">linkedin.com/in/hamid-mahmoodabadi</a></span>
+        </div>
+        <div class="contact-item">
+          <span class="label">GitHub:</span>
+          <span><a href="https://github.com" target="_blank">github.com/your-github</a></span>
+        </div>
+      </section>
 
-<body class="w3-light-grey">
+      <!-- Telegram channel (updated text) -->
+      <section class="sidebar-section">
+        <h2>Telegram</h2>
+        <p>
+          <strong>@Ai_Events</strong>
+          <span class="small-muted">
+            (curating AI/ML events, resources, and community updates; contributing to the field since 2017)
+          </span>
+        </p>
+      </section>
 
-  <div class="w3-content w3-margin-top" style="max-width:1400px;">
-    <div class="w3-row-padding">
+      <!-- Languages -->
+      <section class="sidebar-section">
+        <h2>Languages</h2>
+        <ul>
+          <li class="lang-item">Persian – Native</li>
+          <li class="lang-item">English – TOEFL iBT 100</li>
+          <li class="lang-item">Azeri – Professional</li>
+        </ul>
+      </section>
 
-      <!-- Left Column -->
-      <div class="w3-third">
-        <div class="w3-white w3-text-grey w3-card-4">
-          <div class="w3-display-container">
-            <img src="images/Untitled.jpeg" style="width:100%" alt="Avatar">
-            <div class="w3-display-bottomleft w3-container w3-text-black">
-              <h2 style="background-color: rgba(255, 255, 255, .4);">Hamid Mahmoodabadi</h2>
+      <!-- Personal -->
+      <section class="sidebar-section">
+        <h2>Personal</h2>
+        <p>Date of birth: 29 July 1993</p>
+      </section>
+
+      <!-- Skills section in left panel REMOVED as requested -->
+    </aside>
+
+    <!-- RIGHT COLUMN / MAIN CONTENT -->
+    <main class="main">
+      <!-- HEADER -->
+      <header class="main-header">
+        <div class="name">Hamid Mahmoodabadi</div>
+        <div class="role-title">Senior Data Scientist (NLP & Dynamic Pricing)</div>
+        <!-- "Contributing to the field from 2017" removed from under job title -->
+        <p class="summary">
+          Senior Data Scientist with a strong background in dynamic pricing, NLP, and time series analysis.
+          Passionate about building practical, data-driven products and end-to-end machine learning systems.
+        </p>
+      </header>
+
+      <!-- EXPERIENCE -->
+      <section class="section experience">
+        <h2 class="section-title">Experience</h2>
+
+        <!-- Khanoumi with different font size/style for role vs company -->
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <span class="khanoumi-title">Senior Dynamic Pricing Data Scientist</span>
+              <span class="khanoumi-company">Khanoumi</span>
+              <span class="khanoumi-location">Tehran, Iran</span>
             </div>
+            <div class="experience-dates">Mar 2025 – Present</div>
           </div>
+          <ul>
+            <li>Designing and maintaining a dynamic pricing system that learns price–demand behavior and supports data-driven pricing decisions.</li>
+            <li>Ensuring that pricing respects discount and margin guardrails as well as cost floors, aligned with business strategy.</li>
+            <li>Collaborating with product, marketing, and engineering teams to integrate pricing logic into campaigns and operational workflows.</li>
+          </ul>
+        </article>
 
-          <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Senior Data Scientist</p>
-            <p><i class="fa fa-star fa-fw w3-margin-right w3-large w3-text-teal"></i>Contributing to the field from 2017</p>
-            <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="http://www.linkedin.com/in/mahmoodabadihamid/" target="_blank">www.linkedin.com/in/mahmoodabadihamid</a></p>
-            <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="http://www.github.com/mahmoodabadiHamid" target="_blank">www.github.com/mahmoodabadiHamid</a></p>
-            <p><i class="fa fa-telegram fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://t.me/AI_Events" target="_blank">Telegram Channel - Contributing to the field from 2017</a></p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:MahmoodabadiHamid@gmail.com">MahmoodabadiHamid@gmail.com</a></p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="tel:+989122511147">+98-9122511147</a></p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Tehran, Iran</p>
-            <hr>
-
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-            <p>Python</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
+        <!-- Securities and Exchange Organization of Iran -->
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <span class="experience-role">Senior Machine Learning Engineer (NLP, Time Series)</span><br />
+              <span class="experience-company">Securities and Exchange Organization of Iran</span>
+              <span class="experience-location">Tehran, Iran</span>
             </div>
-
-            <p>PySpark</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-                <div class="w3-center w3-text-white">80%</div>
-              </div>
-            </div>
-
-            <p>Docker</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-            </div>
-
-            <p>Parallel Processing</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
-            </div>
-            <br>
-
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-            <p>Persian</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-            </div>
-
-            <p>English</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-teal" style="height:24px;width:80%"></div>
-            </div>
-
-            <p>Azeri</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-teal" style="height:24px;width:75%"></div>
-            </div>
-
-            <br>
+            <div class="experience-dates">Aug 2021 – 2025</div>
           </div>
-        </div><br>
-      </div>
+          <ul>
+            <li>Developed anomaly-detection models on order-flow features to flag suspicious trading behaviors in real time.</li>
+            <li>Designed and implemented a Persian social-feed monitoring system for financial markets using Hazm, symbol linking, and sentiment/velocity summaries.</li>
+            <li>Built and maintained a real-time monitoring stack ingesting data from TSETMC, TGJU, Investing.com, and internal feeds, tracking 30+ time series with frequent updates.</li>
+            <li>Collaborated with cross-functional stakeholders to define monitoring requirements and integrate alerts into existing workflows.</li>
+          </ul>
+        </article>
 
-      <!-- Right Column -->
-      <div class="w3-twothird">
-
-        <!-- Summary -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
-            Hamid Mahmoodabadi
-          </h2>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Personal Summary</b></h5>
-            <p>
-              Senior Data Scientist with strong experience in machine learning, NLP, time series analysis, and
-              data-driven product development. Passionate about building practical intelligent systems, solving
-              business problems with data, and contributing to innovative teams through technical depth, project
-              execution, and applied research.
-            </p>
-            <hr>
+        <!-- Nemad Bin Bot -->
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <span class="experience-role">Machine Learning Engineer (NLP), Founder & Full-Stack Developer</span><br />
+              <span class="experience-company">Nemad Bin Bot, Sharif University of Technology</span>
+              <span class="experience-location">Tehran, Iran</span>
+            </div>
+            <div class="experience-dates">2020 – 2023</div>
           </div>
+          <ul>
+            <li>Built a Persian-to-visualization system converting natural language to SQL queries, then to Python code and visualizations.</li>
+            <li>Designed a scalable architecture with no single point of failure, high-performance MySQL, and a high-speed web crawler.</li>
+            <li>Instrumented user behavior and usability logs to understand usage patterns and improve product experience.</li>
+            <li>Supported growth to over 10,000 monthly active users.</li>
+          </ul>
+        </article>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Technical Skills</b></h5>
-            <ul class="section-list">
-              <li>Machine Learning Frameworks: PyTorch, TensorFlow, Scikit-Learn</li>
-              <li>Programming Languages: Python</li>
-              <li>Data Manipulation: Pandas, NumPy</li>
-              <li>Deep Learning: Neural Networks, CNNs, RNNs, LSTM, GRU, Transformers</li>
-              <li>Natural Language Processing: NLTK, SpaCy, Hazm</li>
-              <li>Data Visualization: Matplotlib, Seaborn, Plotly, Dash, Bokeh</li>
-              <li>Model Deployment: Docker, Kubernetes</li>
-              <li>Big Data Tools: Spark</li>
-              <li>Version Control: Git, GitHub</li>
-              <li>SQL Databases: MySQL, SQLite, SQL Server</li>
-              <li>Feature Engineering and Data Preprocessing</li>
-              <li>Model Evaluation and Hyperparameter Tuning</li>
-              <li>NLP, Time Series Analysis, Dynamic Pricing, Computer Vision</li>
-            </ul>
-            <hr>
+        <!-- Taha Startup Studio -->
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <span class="experience-role">Machine Learning Engineer (NLP, Image Processing)</span><br />
+              <span class="experience-company">Taha Startup Studio, Sharif University of Technology</span>
+              <span class="experience-location">Tehran, Iran</span>
+            </div>
+            <div class="experience-dates">2017 – 2021</div>
           </div>
+          <ul>
+            <li>Developed NLP tools in Persian and English, including models for sentiment analysis and text classification.</li>
+            <li>Led the creation of a fine-grained Persian sentiment dataset (43,000+ sentences, five-class labels).</li>
+            <li>Implemented a game-playing agent using CNNs, data preprocessing, hyperparameter tuning, and data augmentation.</li>
+          </ul>
+        </article>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Management and Collaboration Skills</b></h5>
-            <ul class="section-list">
-              <li>Project management and team workspace tools: Jira, Trello</li>
-              <li>Cross-functional collaboration</li>
-              <li>Project planning, execution, and delivery</li>
-              <li>Effective communication and coordination</li>
-              <li>Outcome-oriented mindset and decision-making</li>
-              <li>Time management and prioritization</li>
-              <li>Collaborative problem solving in technical environments</li>
-            </ul>
-            <hr>
+        <!-- Sibe Sorkh -->
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <span class="experience-role">Machine Learning Engineer (NLP), Co-founder</span><br />
+              <span class="experience-company">Sibe Sorkh, MCS Department, Allameh Tabataei University</span>
+              <span class="experience-location">Tehran, Iran</span>
+            </div>
+            <div class="experience-dates">2016 – 2017</div>
+          </div>
+          <ul>
+            <li>Developed and trained a text classification model to distinguish homeowner vs. real estate agent ads.</li>
+            <li>Built a crawl–clean–analyze pipeline processing over 10,000 rows per day.</li>
+          </ul>
+        </article>
+
+        <!-- Amin Intelliware -->
+        <article class="experience-item">
+          <div class="experience-header">
+            <div>
+              <span class="experience-role">Game Developer & Augmented Reality Developer</span><br />
+              <span class="experience-company">Amin Intelliware</span>
+              <span class="experience-location">Tehran, Iran</span>
+            </div>
+            <div class="experience-dates">2012 – 2015</div>
+          </div>
+          <ul>
+            <li>Developed 2D/3D game features and augmented reality experiences as part of a small development team.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- SKILLS: Management & Collaboration FIRST, then Technical -->
+      <section class="section">
+        <h2 class="section-title">Management and Collaboration Skills</h2>
+        <ul class="skills-list">
+          <li>End-to-end ownership of machine learning projects from scoping and experimentation to deployment and monitoring.</li>
+          <li>Cross-functional collaboration with product, engineering, and business stakeholders.</li>
+          <li>Project planning, backlog prioritization, and alignment with business objectives.</li>
+          <li>Communicating complex technical concepts to non-technical audiences.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <ul class="skills-list">
+          <li><strong>Machine Learning & NLP:</strong> Python, PyTorch, TensorFlow, scikit-learn, deep learning, text classification, sentiment analysis, RNNs, transformers, Persian NLP (Hazm, custom datasets).</li>
+          <li><strong>Time Series & Finance:</strong> forecasting, anomaly detection, order-flow modeling, financial market data pipelines.</li>
+          <li><strong>Data & Backend:</strong> SQL, MySQL, ETL pipelines, REST APIs, data integration, web crawling.</li>
+          <li><strong>Tools & Platforms:</strong> Git, Linux, Docker, Jupyter, data visualization tools (Matplotlib, Plotly, etc.).</li>
+        </ul>
+      </section>
+
+      <!-- RESEARCH & PUBLICATIONS -->
+      <section class="section">
+        <h2 class="section-title">Research Publications & Academic Work</h2>
+
+        <div class="pub-item">
+          <div class="pub-title">Uber’s Contribution to Faster Deep Learning: A Case Study in Distributed Model Training</div>
+          <div class="pub-venue">Book chapter, Springer</div>
+          <div>Explores practical aspects of distributed training and scaling deep learning workloads.</div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">PSA43K: A Fine-Grained Persian Sentiment Analysis Dataset</div>
+          <div class="pub-venue">ACL Rolling Review</div>
+          <div>
+            First author: Hamid Mahmoodabadi; co-author: Leila Afsar; supervisor: Ahmed M. Abdelmoniem (Queen Mary University of London).  
+            Introduces PSA43K, a fine-grained Persian sentiment dataset and benchmarks for sentiment analysis.
           </div>
         </div>
 
-        <!-- Work Experience -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
-            Work Experience
-          </h2>
+        <div class="pub-item">
+          <div class="pub-title">Evaluation of the Effect of Dimension Reduction on the Performance of Linear and Non-linear Classifiers</div>
+          <div class="pub-venue">Conference Paper, 2017</div>
+          <div>Supervisor: Mohammadreza A. Oskoei (University of Essex).</div>
+        </div>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Senior Dynamic Pricing Data Scientist / Khanoumi, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2025 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-            <ul class="section-list">
-              <li>Built and deployed a dynamic pricing system for automated daily price recommendation.</li>
-              <li>Designed a pricing engine that learns price-demand behavior while respecting discount guardrails and cost floors.</li>
-              <li>Integrated pricing recommendations with campaign planning workflows.</li>
-              <li>Contributed to data-driven pricing decisions through practical machine learning solutions.</li>
-            </ul>
-            <hr>
-          </div>
+        <div class="pub-item">
+          <div class="pub-title">Glossary of Data Science and Machine Learning Terms</div>
+          <div class="pub-venue">GitHub Repository (2023)</div>
+          <div>A curated, evolving glossary of core concepts in data science and machine learning.</div>
+        </div>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Senior Machine Learning Engineer (NLP, Time Series) / Securities and Exchange Organization of Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2021 - 2025</h6>
-            <ul class="section-list">
-              <li>Developed anomaly detection models on order-flow features to identify suspicious market behavior.</li>
-              <li>Designed a Persian social media monitoring system for finance-related hashtags and market sentiment tracking.</li>
-              <li>Built real-time monitoring pipelines and dashboards using external and internal market data feeds.</li>
-              <li>Worked on NLP and time series solutions for market surveillance and analysis.</li>
-              <li>Contributed to project planning and execution for monitoring and analytics products.</li>
-            </ul>
-            <hr>
-          </div>
+        <div class="pub-item">
+          <div class="pub-title">Time-Series Prediction for Stock Markets</div>
+          <div class="pub-venue">Research Project (2019)</div>
+          <div>Predicted time series for 10 stock market shares using PyTorch, NumPy, and RNN-based models.</div>
+        </div>
+      </section>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Founder & Full-Stack Developer with Machine Learning Expertise / Nemad Bin Bot, Sharif University of Technology, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020 - 2023</h6>
-            <ul class="section-list">
-              <li>Designed and implemented a Persian natural language to visualization pipeline: NLP → SQL Query → Python Code → Visualization.</li>
-              <li>Built scalable software architecture with strong system reliability considerations.</li>
-              <li>Designed a high-performance MySQL database for intensive read-write operations.</li>
-              <li>Developed a high-speed web crawler for efficient data extraction and storage.</li>
-              <li>Analyzed user logs and usability patterns and contributed to attracting more than 10,000 monthly active users.</li>
-              <li><span style="color: #009688;">Tools:</span> Python, PyTorch, Telegram Bot, MySQL, NLTK, Plotly</li>
-            </ul>
-            <hr>
-          </div>
+      <!-- EDUCATION -->
+      <section class="section">
+        <h2 class="section-title">Education</h2>
 
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Machine Learning Engineer / Taha Startup Studio, Sharif University of Technology, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2021</h6>
-            <ul class="section-list">
-              <li>Developed basic NLP tools in both Persian and English.</li>
-              <li>Led the creation of a fine-grained Persian sentiment analysis dataset with more than 43,000 sentences and five-class labels.</li>
-              <li>Contributed to sentiment analysis model development based on the dataset.</li>
-              <li>Developed a video game-playing agent using CNN-based image processing approaches.</li>
-              <li><span style="color: #009688;">Tools:</span> Python, PyTorch, LSTM, GRU, CNN, Image Processing</li>
-            </ul>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Machine Learning Research Engineer / Department of Economics and Management, Sharif University of Technology, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019</h6>
-            <ul class="section-list">
-              <li>Created a model to predict time series data for 10 stock market shares.</li>
-              <li><span style="color: #009688;">Tools:</span> PyTorch, NumPy, RNN</li>
-            </ul>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Co-founder and Machine Learning Engineer / Sibe Sorkh, MCS Department, Allameh Tabataei University, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2017</h6>
-            <ul class="section-list">
-              <li>Developed and trained a text classification model to distinguish homeowner ads from real estate agent ads.</li>
-              <li>Built a pipeline to crawl, clean, and analyze web data with more than 10,000 rows processed daily.</li>
-              <li><span style="color: #009688;">Tools:</span> Python, Scrapy, Requests, Selenium, BeautifulSoup, UrlLib</li>
-            </ul>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Game Developer / Amin Intelliware, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2015</h6>
-            <ul class="section-list">
-              <li>Video game developer.</li>
-              <li>Augmented Reality developer.</li>
-            </ul>
-            <br>
+        <div class="edu-item">
+          <div class="edu-degree">MSc in Computer Science – Artificial Intelligence</div>
+          <div class="edu-school">Allameh Tabataei University, Tehran, Iran</div>
+          <div class="edu-details">
+            2016 – 2018 | GPA: 16.5/20<br />
+            Thesis: “Sentence-based Sentiment Analysis using Deep Recursive Tensor Neural Networks”<br />
+            Supervisor: Dr. Farzad Eskandari
           </div>
         </div>
 
-        <!-- Research / Publications -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
-            Research Publications & Academic Work
-          </h2>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Uber’s Contribution to Faster Deep Learning, A Case Study in Distributed Model Training</b></h5>
-            <p>Chapter published in <i>Advances in Data Clustering: Theory and Applications</i>, Springer.</p>
-            <p>Author: Hamid Mahmoodabadi</p>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>PSA43K: A Fine-Grained Persian Sentiment Analysis Dataset</b></h5>
-            <p>Under ACL Rolling Review.</p>
-            <p>First Author: Hamid Mahmoodabadi</p>
-            <p>Co-author: Leila Afsar</p>
-            <p>Supervisor: Ahmed M. Abdelmoniem, Queen Mary University of London</p>
-            <p>Research contribution: creation of a Persian sentiment dataset with 43,000+ sentences and fine-grained five-class labels.</p>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Evaluation the Effect of the Dimension Reduction on the Performance of Linear and Non-linear Classifiers</b></h5>
-            <p>Conference paper, July 2017.</p>
-            <p>First Author: Hamid Mahmoodabadi</p>
-            <p>Supervisor: Mohammadreza A. Oskoei, University of Essex</p>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Glossary of Data Science and Machine Learning Terms</b></h5>
-            <p>GitHub repository, July 2023.</p>
-            <p>Author: Hamid Mahmoodabadi</p>
-            <br>
+        <div class="edu-item">
+          <div class="edu-degree">BSc in Computer Software Engineering</div>
+          <div class="edu-school">Computer Engineering Department</div>
+          <div class="edu-details">
+            2012 – 2014 | GPA: 16.6/20<br />
+            Final Project: “Designing and Implementing Online Shopping Website from Scratch”<br />
+            Supervisor: Dr. Amin Ghazizahedi
           </div>
         </div>
-
-        <!-- Education -->
-        <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>
-            Education
-          </h2>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>MSc in Computer Science - Artificial Intelligence | Allameh Tabataei University, Tehran, Iran</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2018</h6>
-            <p>GPA: 16.5/20</p>
-            <p>Thesis: Sentence-based Sentiment Analysis using Deep Recursive Tensor Neural Networks</p>
-            <p>Supervisor: Dr. Farzad Eskandari</p>
-            <hr>
-          </div>
-
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>BSc in Computer Software Engineering | Computer Engineering Department</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2014</h6>
-            <p>GPA: 16.6/20</p>
-            <p>Final project: Designing and Implementing Online Shopping Website from Scratch</p>
-            <p>Supervisor: Dr. Amin Ghazizahedi</p>
-            <br>
-          </div>
-        </div>
-
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
-
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
-    <p>Find me on social media.</p>
-    <a href="http://www.linkedin.com/in/mahmoodabadihamid/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <a href="http://www.github.com/mahmoodabadiHamid" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://t.me/AI_Events" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
-
 </body>
-
 </html>
