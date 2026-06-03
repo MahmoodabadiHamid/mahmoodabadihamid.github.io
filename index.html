@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
-    /* Basic reset */
+    /* ====== ORIGINAL CSS (unchanged in spirit) ====== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -37,7 +37,6 @@
       display: flex;
     }
 
-    /* Left column */
     .sidebar {
       width: 30%;
       background: #1f2933;
@@ -82,7 +81,6 @@
       color: #cbd2e1;
     }
 
-    /* Right column */
     .main {
       width: 70%;
       padding: 24px 32px 32px 32px;
@@ -128,7 +126,6 @@
       margin-bottom: 10px;
     }
 
-    /* Experience */
     .experience-item {
       margin-bottom: 14px;
     }
@@ -173,38 +170,12 @@
       margin-bottom: 3px;
     }
 
-    /* Khanoumi role: different fonts for title & company */
-    .khanoumi-header {
-      margin-bottom: 2px;
-    }
-
-    .khanoumi-title {
-      font-size: 1.02rem;
-      font-weight: 700;
-      color: #111827;
-    }
-
-    .khanoumi-company {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: #374151;
-      margin-left: 6px;
-    }
-
-    .khanoumi-location {
-      font-size: 0.86rem;
-      color: #6b7280;
-      margin-left: 4px;
-    }
-
-    /* Skills */
     .skills-list {
       list-style: disc;
       margin-left: 16px;
       font-size: 0.9rem;
     }
 
-    /* Education */
     .edu-item {
       margin-bottom: 10px;
     }
@@ -224,7 +195,6 @@
       color: #4b5563;
     }
 
-    /* Publications */
     .pub-item {
       margin-bottom: 8px;
       font-size: 0.9rem;
@@ -239,13 +209,11 @@
       color: #4b5563;
     }
 
-    /* Languages */
     .lang-item {
       font-size: 0.9rem;
       margin-bottom: 3px;
     }
 
-    /* Responsive */
     @media (max-width: 800px) {
       .page {
         flex-direction: column;
@@ -254,6 +222,24 @@
       .main {
         width: 100%;
       }
+    }
+
+    /* Small addition ONLY for Khanoumi role/company styling */
+    .khanoumi-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #111827;
+    }
+    .khanoumi-company {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: #374151;
+      margin-left: 6px;
+    }
+    .khanoumi-location {
+      font-size: 0.86rem;
+      color: #6b7280;
+      margin-left: 4px;
     }
   </style>
 </head>
@@ -286,19 +272,24 @@
         </div>
       </section>
 
-      <!-- Telegram channel (updated text) -->
+      <!-- Telegram channel (fixed text) -->
       <section class="sidebar-section">
         <h2>Telegram</h2>
-        <p><strong>@Ai_Events</strong> <span class="small-muted">(curating AI/ML events, resources, and community updates; contributing to the field since 2017)</span></p>
+        <p>
+          <strong>@Ai_Events</strong>
+          <span class="small-muted">
+            (curating AI/ML events, resources, and community updates; contributing to the field since 2017)
+          </span>
+        </p>
       </section>
 
       <!-- Languages -->
       <section class="sidebar-section">
         <h2>Languages</h2>
         <ul>
-          <li>Persian – Native</li>
-          <li>English – TOEFL iBT 100</li>
-          <li>Azeri – Professional</li>
+          <li class="lang-item">Persian – Native</li>
+          <li class="lang-item">English – TOEFL iBT 100</li>
+          <li class="lang-item">Azeri – Professional</li>
         </ul>
       </section>
 
@@ -308,7 +299,7 @@
         <p>Date of birth: 29 July 1993</p>
       </section>
 
-      <!-- NOTE: Skills from left panel REMOVED as requested -->
+      <!-- Skills in left panel REMOVED -->
     </aside>
 
     <!-- RIGHT COLUMN / MAIN CONTENT -->
@@ -328,10 +319,10 @@
       <section class="section experience">
         <h2 class="section-title">Experience</h2>
 
-        <!-- Khanoumi -->
+        <!-- Khanoumi (role/company styled differently) -->
         <article class="experience-item">
           <div class="experience-header">
-            <div class="khanoumi-header">
+            <div>
               <span class="khanoumi-title">Senior Dynamic Pricing Data Scientist</span>
               <span class="khanoumi-company">Khanoumi</span>
               <span class="khanoumi-location">Tehran, Iran</span>
@@ -430,7 +421,7 @@
         </article>
       </section>
 
-      <!-- SKILLS: Management & Collaboration first, then Technical -->
+      <!-- SKILLS: Management & Collaboration FIRST, then Technical -->
       <section class="section">
         <h2 class="section-title">Management and Collaboration Skills</h2>
         <ul class="skills-list">
