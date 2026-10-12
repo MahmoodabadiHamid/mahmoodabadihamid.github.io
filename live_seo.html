@@ -1,165 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Project Introduction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #009688;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        section {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #009688;
-        }
-        p {
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .slideshow-container img {
-            max-width: 100%;
-            height: auto;
-            display: none;
-        }
-        .slideshow-container img:first-child {
-            display: block;
-        }
-        .prev, .next, .fullscreen {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-            background-color: #009688; /* Add background color */
-            transition: 0.3s ease;
-            border-radius: 5px; /* Add rounded corners */
-            opacity: .6;
-        }
-        .prev:hover, .next:hover, .fullscreen:hover {
-            background-color: #007a63; /* Change color on hover */
-        }
-        .prev {
-            left: 0;
-        }
-        .next {
-            right: 0;
-        }
-        .fullscreen {
-            right: 50px;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var currentIndex = 0;
-            var screenshots = $(".screenshot");
-            var totalScreenshots = screenshots.length;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Monitoring Dashboard | Hamid Mahmoodabadi</title>
+  <meta name="description" content="A real-time market monitoring and Persian social-feed intelligence dashboard built by Hamid Mahmoodabadi for financial-market analysis.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #2b2b2b;
+    }
 
-            function showScreenshot(index) {
-                screenshots.hide();
-                screenshots.eq(index).fadeIn();
-            }
+    header {
+      background-color: #009688;
+      color: #fff;
+      text-align: center;
+      padding: 28px 16px;
+    }
 
-            function showNextScreenshot() {
-                currentIndex = (currentIndex + 1) % totalScreenshots;
-                showScreenshot(currentIndex);
-            }
+    header h1 {
+      color: #fff;
+      margin: 0 0 8px;
+    }
 
-            function showPrevScreenshot() {
-                currentIndex = (currentIndex - 1 + totalScreenshots) % totalScreenshots;
-                showScreenshot(currentIndex);
-            }
+    header p {
+      margin: 0;
+    }
 
-            function toggleFullScreen() {
-                var element = document.querySelector(".slideshow-container");
-                if (!document.fullscreenElement) {
-                    if (element.requestFullscreen) {
-                        element.requestFullscreen();
-                    } else if (element.mozRequestFullScreen) {
-                        element.mozRequestFullScreen();
-                    } else if (element.webkitRequestFullscreen) {
-                        element.webkitRequestFullscreen();
-                    } else if (element.msRequestFullscreen) {
-                        element.msRequestFullscreen();
-                    }
-                } else {
-                    if (document.exitFullscreen) {
-                        document.exitFullscreen();
-                    } else if (document.mozCancelFullScreen) {
-                        document.mozCancelFullScreen();
-                    } else if (document.webkitExitFullscreen) {
-                        document.webkitExitFullscreen();
-                    }
-                }
-            }
+    nav {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 20px;
+    }
 
-            $(".next").click(showNextScreenshot);
-            $(".prev").click(showPrevScreenshot);
-            $(".fullscreen").click(toggleFullScreen);
-        });
-    </script>
+    nav a {
+      color: #007a63;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #009688;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ul {
+      line-height: 1.6;
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      margin-top: 16px;
+    }
+
+    .metric {
+      border-left: 4px solid #009688;
+      background: #f7fbfa;
+      padding: 12px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.25rem;
+      color: #007a63;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      background: #111;
+    }
+
+    .slideshow-container img {
+      max-width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .slideshow-container img:first-child {
+      display: block;
+    }
+
+    .prev,
+    .next,
+    .fullscreen {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 14px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: #009688;
+      transition: 0.3s ease;
+      border-radius: 5px;
+      opacity: .78;
+      user-select: none;
+      transform: translateY(-50%);
+    }
+
+    .prev:hover,
+    .next:hover,
+    .fullscreen:hover {
+      background-color: #007a63;
+      opacity: 1;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .fullscreen {
+      right: 52px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var currentIndex = 0;
+      var screenshots = $(".screenshot");
+      var totalScreenshots = screenshots.length;
+
+      function showScreenshot(index) {
+        screenshots.hide();
+        screenshots.eq(index).fadeIn();
+      }
+
+      function showNextScreenshot() {
+        currentIndex = (currentIndex + 1) % totalScreenshots;
+        showScreenshot(currentIndex);
+      }
+
+      function showPrevScreenshot() {
+        currentIndex = (currentIndex - 1 + totalScreenshots) % totalScreenshots;
+        showScreenshot(currentIndex);
+      }
+
+      function toggleFullScreen() {
+        var element = document.querySelector(".slideshow-container");
+        if (!document.fullscreenElement) {
+          if (element.requestFullscreen) {
+            element.requestFullscreen();
+          } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+          } else if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+          } else if (element.msRequestFullscreen) {
+            element.msRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+        }
+      }
+
+      $(".next").click(showNextScreenshot);
+      $(".prev").click(showPrevScreenshot);
+      $(".fullscreen").click(toggleFullScreen);
+    });
+  </script>
 </head>
+
 <body>
-    <header>
-        <h1>Project Name</h1>
-        <p>A Professional Software Project Introduction</p>
-    </header>
+  <header>
+    <h1>Real-Time Market Monitoring Dashboard</h1>
+    <p>Financial-market surveillance, Persian social-feed intelligence, and source-backed analyst triage.</p>
+  </header>
 
-    <section>
-        <h2>About the Project</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, risus ut cursus cursus, orci urna fringilla dui, eu facilisis risus purus sit amet turpis. Sed sit amet lorem eu arcu dignissim consequat.
-        </p>
-    </section>
+  <nav>
+    <a href="index.html">Back to CV</a>
+  </nav>
 
-    <section>
-        <h2>Project Screenshots</h2>
-        <div class="slideshow-container">
-            <img class="screenshot" src="images/1- Live_stock_market_analysis_dashboard.png" alt="Screenshot 1">
-            <img class="screenshot" src="images/1- Live_stock_market_analysis_dashboard.png" alt="Screenshot 2">
-            <!-- Add more screenshots as needed -->
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-            <a class="fullscreen">&#128470;</a>
-        </div>
-    </section>
+  <section>
+    <h2>About the Project</h2>
+    <p>
+      At the Securities and Exchange Organization of Iran, Hamid Mahmoodabadi built a real-time monitoring
+      stack and dashboard for market-surveillance and analyst workflows. The system ingests TSETMC, TGJU,
+      Investing.com, and internal feeds, then surfaces high-signal indicators including TEPIX, IFB, flows,
+      YTM, FX, crypto, and commodities in a single operational view.
+    </p>
+    <div class="metrics">
+      <div class="metric">
+        <strong>15-60s</strong>
+        Core metric refresh interval
+      </div>
+      <div class="metric">
+        <strong>30+</strong>
+        Maintained time series with automatic rollups
+      </div>
+      <div class="metric">
+        <strong>Persian NLP</strong>
+        Finance hashtag monitoring, symbol linking, and sentiment summaries
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>Tools Used</h2>
-        <ul>
-            <li>Tool 1</li>
-            <li>Tool 2</li>
-            <li>Tool 3</li>
-            <!-- Add more tools as needed -->
-        </ul>
-    </section>
+  <section>
+    <h2>Market and Social Intelligence</h2>
+    <ul>
+      <li>Trained anomaly-detection models on order-flow features to flag suspect behavior such as sudden depth imbalances and spoof-like bursts.</li>
+      <li>Fed model output into live dashboards and alert channels so analysts could prioritize human review.</li>
+      <li>Designed a Persian-language social-feed monitor that collects finance hashtags, cleans text with Hazm, links mentions to listed symbols, and summarizes sentiment and velocity.</li>
+      <li>Built a lightweight RAG subsystem that retrieves recent posts and internal symbol facts for source-backed answers to market-movement questions.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Project Screenshots</h2>
+    <div class="slideshow-container">
+      <img class="screenshot" src="images/1- Live_stock_market_analysis_dashboard.png" alt="Live stock market analysis dashboard">
+      <img class="screenshot" src="images/2- live_social_media_monitoring_dashb oard.png" alt="Live social media monitoring dashboard">
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+      <a class="fullscreen">&#128470;</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tools and Methods</h2>
+    <ul>
+      <li>Python-based data collection, cleaning, modeling, and dashboard workflows.</li>
+      <li>Hazm for Persian text processing and entity cleanup.</li>
+      <li>Time-series monitoring, automatic rollups, anomaly detection, and operational alerts.</li>
+      <li>RAG-assisted retrieval over recent posts and internal symbol facts for analyst triage.</li>
+    </ul>
+  </section>
 </body>
-</html>
 
+</html>
